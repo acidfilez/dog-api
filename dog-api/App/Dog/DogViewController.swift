@@ -20,6 +20,9 @@ class DogViewController: UICollectionViewController {
     var dataSource: [URL] = []
     var worker: DogsWorkerProtocol = DogsWorker()
 
+    //handle empty colletionview
+    var displayEmpty = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,7 +80,7 @@ extension DogViewController {
 extension DogViewController {
     func fetchBreeds() {
         guard let dog = theDog else {
-            assertionFailure("cant do anything without a breed")
+            assertionFailure("Trying to fetch breed images without an instance of theDog")
             return
         }
 
@@ -87,13 +90,14 @@ extension DogViewController {
             do {
                 let images = try response()
                 self?.dataSource = images.flatMap { URL(string: $0.imageUrl) }
-                self?.collectionView?.reloadData()
 
                 //Set title with total count.
                 self?.title = "\(dog.breed) (\(images.count))".uppercased()
             } catch {
                 self?.showError(error)
             }
+            self?.displayEmpty = true
+            self?.collectionView?.reloadData()
         }
     }
 }
@@ -140,6 +144,11 @@ extension DogViewController: EmptyDataSource {
 }
 
 extension DogViewController: EmptyDelegate {
+    //Display empty after fetching data
+    func emptyShouldDisplay(in view: UIView) -> Bool {
+        return displayEmpty
+    }
+
     //Lets allow taping and reloading
     func emptyShouldAllowTouch(in view: UIView) -> Bool {
         return true

@@ -11,10 +11,17 @@ import EmptyKit
 
 private let reuseIdentifierTable = "DogCell"
 
+enum SegueRouter: String {
+    case showDog = "ShowDog"
+}
+
 class DogsListViewController: UITableViewController {
 
     var dataSource: [Dog] = []
     var worker: DogsWorkerProtocol = DogsWorker()
+
+    //handle empty tableview
+    var displayEmpty = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +39,13 @@ class DogsListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let destination = segue.destination as! DogViewController
-        destination.theDog = sender as? Dog
+        if segue.identifier == SegueRouter.showDog.rawValue {
+            let cell = sender as! UITableViewCell
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
+            let dog = dataSource[indexPath.row]
+            let destination = segue.destination as! DogViewController
+            destination.theDog = dog
+        }
     }
 }
 
@@ -52,10 +64,6 @@ extension DogsListViewController {
         cell.textLabel?.text = dog.breed.capitalized
 
         return cell
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowDog", sender: dataSource[indexPath.row])
     }
 }
 
@@ -84,10 +92,11 @@ extension DogsListViewController {
             do {
                 let dogs = try response()
                 self?.dataSource = dogs
-                self?.tableView.reloadData()
             } catch {
                 self?.showError(error)
             }
+            self?.displayEmpty = true
+            self?.tableView.reloadData()
         }
     }
 }
@@ -122,6 +131,11 @@ extension DogsListViewController: EmptyDataSource {
 }
 
 extension DogsListViewController: EmptyDelegate {
+    //Display empty after fetching data
+    func emptyShouldDisplay(in view: UIView) -> Bool {
+        return displayEmpty
+    }
+
     //Lets allow taping and reloading
     func emptyShouldAllowTouch(in view: UIView) -> Bool {
         return true

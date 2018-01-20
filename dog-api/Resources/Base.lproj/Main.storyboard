@@ -34,6 +34,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="w8R-Qk-DJ7" kind="show" identifier="ShowDog" id="LuJ-v7-Nzj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,9 +45,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="JKC-W5-v6Y"/>
-                    <connections>
-                        <segue destination="w8R-Qk-DJ7" kind="show" identifier="ShowDog" id="0Gk-Ne-Tyk"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzG-m3-yOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
