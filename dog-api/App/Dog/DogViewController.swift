@@ -56,7 +56,7 @@ extension DogViewController {
 extension DogViewController {
 
     func setupUI() {
-        self.title = theDog?.breed
+        self.title = theDog?.breed.uppercased()
 
         //Configure EmptyKit
         self.collectionView?.ept.dataSource = self
@@ -90,7 +90,7 @@ extension DogViewController {
                 self?.collectionView?.reloadData()
 
                 //Set title with total count.
-                self?.title = "\(dog.breed) (\(images.count))"
+                self?.title = "\(dog.breed) (\(images.count))".uppercased()
             } catch {
                 self?.showError(error)
             }
@@ -140,19 +140,22 @@ extension DogViewController: EmptyDataSource {
 }
 
 extension DogViewController: EmptyDelegate {
-
+    //Lets allow taping and reloading
     func emptyShouldAllowTouch(in view: UIView) -> Bool {
         return true
     }
 
+    //Lets allow gestering
     func emptyShouldEnableTapGesture(in view: UIView) -> Bool {
         return true
     }
 
+    //User taps de dog placeholder it reloads.
     func emptyView(_ emptyView: UIView, tappedIn view: UIView) {
         fetchBreeds()
     }
 
+    //User taps the reload button it reloads.
     func emptyButton(_ button: UIButton, tappedIn view: UIView) {
         fetchBreeds()
     }

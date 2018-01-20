@@ -49,7 +49,7 @@ extension DogsListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierTable, for: indexPath)
 
         let dog = dataSource[indexPath.row]
-        cell.textLabel?.text = dog.breed
+        cell.textLabel?.text = dog.breed.capitalized
 
         return cell
     }
@@ -64,7 +64,7 @@ extension DogsListViewController {
 
     func setupUI() {
         // Do any additional setup after loading the view.
-        self.title = "breeds"
+        self.title = "BREEDS"
 
         //trick to remove separate lines
         self.tableView.tableFooterView = UIView()
@@ -122,19 +122,22 @@ extension DogsListViewController: EmptyDataSource {
 }
 
 extension DogsListViewController: EmptyDelegate {
-
+    //Lets allow taping and reloading
     func emptyShouldAllowTouch(in view: UIView) -> Bool {
         return true
     }
 
+    //Lets allow gestering
     func emptyShouldEnableTapGesture(in view: UIView) -> Bool {
         return true
     }
 
+    //User taps de dog placeholder it reloads.
     func emptyView(_ emptyView: UIView, tappedIn view: UIView) {
         fetchDogs()
     }
 
+    //User taps the reload button it reloads.
     func emptyButton(_ button: UIButton, tappedIn view: UIView) {
         fetchDogs()
     }
