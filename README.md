@@ -1,17 +1,17 @@
 # Project Title
 
-App to display unicorn-like.cute-dogs 🐶
+App to display unicorn like cute-dogs 🐶
 
 
 ## Getting Started
 
-We use this apis to fetch data
+We uses these apis to fetch data
 ```
 GET 'https://dog.ceo/api/breeds/list'
 GET 'https://dog.ceo/api/breed/{name}/images'
 ```
 
-- The app use with Storyboards, UITableViewController, UICollectionViewController
+- The app uses: Storyboard, UITableViewController, UICollectionViewController
 because its a simple project.
 
 ### Prerequisites
@@ -39,6 +39,7 @@ pod install
 - pod 'PKHUD', '~> 5.0'
 - pod 'Agrume'
 - pod 'SwiftLint'
+- pod 'EmptyKit'
 
 #### Why?
 
