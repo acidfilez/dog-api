@@ -1,0 +1,48 @@
+PODS:
+  - Agrume (4.0.2)
+  - Alamofire (4.6.0)
+  - AlamofireNetworkActivityLogger (2.2.0):
+    - Alamofire (~> 4.0)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - EmptyKit (4.0.0)
+  - Kingfisher (4.6.1)
+  - ObjectMapper (3.1.0)
+  - PKHUD (5.0.0)
+  - SwiftLint (0.24.2)
+
+DEPENDENCIES:
+  - Agrume (from `https://github.com/JanGorman/Agrume.git`)
+  - Alamofire (~> 4.5)
+  - AlamofireNetworkActivityLogger (~> 2.0)
+  - AlamofireObjectMapper (~> 5.0)
+  - EmptyKit
+  - Kingfisher (~> 4.0)
+  - ObjectMapper (~> 3.0)
+  - PKHUD (~> 5.0)
+  - SwiftLint
+
+EXTERNAL SOURCES:
+  Agrume:
+    :git: https://github.com/JanGorman/Agrume.git
+
+CHECKOUT OPTIONS:
+  Agrume:
+    :commit: 0a1d7bbdfa4aff2bbe79ea8b400fd7dc5503cc7c
+    :git: https://github.com/JanGorman/Agrume.git
+
+SPEC CHECKSUMS:
+  Agrume: 3d16c5f984a707c5b23ef2c948a257cfcfec7b2c
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireNetworkActivityLogger: a7ae1842988b3f6248a49213268375bd27b515f0
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  EmptyKit: cc455a9348e3b84e28fffb709d65340637e4f02f
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  SwiftLint: 2aa21b96c8d13396a051bc1cb659d2ce1e0075b0
+
+PODFILE CHECKSUM: b1a31df9e4cd03e1c8d71f181691b11cd7e69d2a
+
+COCOAPODS: 1.4.0.rc.1
