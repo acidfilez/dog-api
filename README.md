@@ -5,7 +5,7 @@ App to display unicorn like cute-dogs 🐶
 
 ## Getting Started
 
-We uses these apis to fetch data
+We use these apis to fetch data
 ```
 GET 'https://dog.ceo/api/breeds/list'
 GET 'https://dog.ceo/api/breed/{name}/images'
