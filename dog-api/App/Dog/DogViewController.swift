@@ -76,8 +76,13 @@ extension DogViewController {
 // MARK: - Networking
 extension DogViewController {
     func fetchBreeds() {
+        guard let dog = theDog else {
+            assertionFailure("cant do anything without a breed")
+            return
+        }
+
         startLoading()
-        worker.fetchImages(for: theDog!) { [weak self] (response) in
+        worker.fetchImages(for: dog) { [weak self] (response) in
             self?.stopLoading()
             do {
                 let images = try response()
@@ -85,10 +90,7 @@ extension DogViewController {
                 self?.collectionView?.reloadData()
 
                 //Set title with total count.
-                guard let breedName = self?.theDog?.breed, let total = self?.dataSource.count else {
-                    return
-                }
-                self?.title = "\(breedName) (\(total))"
+                self?.title = "\(dog.breed) (\(images.count))"
             } catch {
                 self?.showError(error)
             }

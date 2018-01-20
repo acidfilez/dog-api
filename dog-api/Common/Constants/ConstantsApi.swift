@@ -10,31 +10,12 @@ import Foundation
 
 extension Constants.Api {
 
-    private static var host: String {
-        return "dog.ceo"
-    }
+    static let baseURL: URL = URL(string: "https://dog.ceo")! //This will never fail
+    static let apiURL: URL = baseURL.appendingPathComponent("api")
 
-    private static var scheme: String {
-        return "https://"
-    }
+    static let breedsURL: URL = apiURL.appendingPathComponent("breeds/list")
 
-    private static var basePath: String {
-        return "api"
-    }
-
-    private static var apiUrl: String {
-        return baseUrl +  "/" + basePath
-    }
-
-    static var baseUrl: String {
-        return scheme + host
-    }
-
-    static var breedsList: String {
-        return apiUrl + "/breeds/list"
-    }
-
-    static var breedImagesList: String {
-        return apiUrl + "/breed/{name}/images"
+    static func breedImagesURL(for breedName: String) -> URL {
+        return apiURL.appendingPathComponent("/breed/\(breedName)/images")
     }
 }

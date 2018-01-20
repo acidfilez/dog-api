@@ -58,7 +58,7 @@ pod install
 disabled_rules: # rule identifiers to exclude from running
 - force_cast
 - force_try
-- line_length
+- line_lengtho
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Pods
 opt_in_rules: # some rules are only opt-in

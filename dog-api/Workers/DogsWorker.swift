@@ -9,8 +9,8 @@
 import Foundation
 
 protocol DogsWorkerProtocol {
-    func fetchDogs(response: @escaping (() throws -> ([Dog])) -> Void )
-    func fetchImages(for dog: Dog, response: @escaping (() throws -> ([Breed])) -> Void )
+    func fetchDogs(response: @escaping (() throws -> ([Dog])) -> Void)
+    func fetchImages(for dog: Dog, response: @escaping (() throws -> ([Breed])) -> Void)
 }
 
 class DogsWorker: DogsWorkerProtocol {
