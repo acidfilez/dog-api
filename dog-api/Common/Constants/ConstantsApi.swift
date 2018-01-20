@@ -10,24 +10,24 @@ import Foundation
 
 extension Constants.Api {
 
-    static var host: String {
+    private static var host: String {
         return "dog.ceo"
     }
 
-    static var scheme: String {
+    private static var scheme: String {
         return "https://"
+    }
+
+    private static var basePath: String {
+        return "api"
+    }
+
+    private static var apiUrl: String {
+        return baseUrl +  "/" + basePath
     }
 
     static var baseUrl: String {
         return scheme + host
-    }
-
-    static var basePath: String {
-        return "api"
-    }
-
-    fileprivate static var apiUrl: String {
-        return baseUrl +  "/" + basePath
     }
 
     static var breedsList: String {

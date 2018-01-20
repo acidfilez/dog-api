@@ -11,8 +11,10 @@
 		5032CA742012EFBC008AFDB3 /* BreedsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032CA732012EFBC008AFDB3 /* BreedsResponse.swift */; };
 		5032CA762012F010008AFDB3 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032CA752012F010008AFDB3 /* Breed.swift */; };
 		5032CA792012FCFB008AFDB3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5032CA782012FCFB008AFDB3 /* .swiftlint.yml */; };
-		5032CA7D20131A52008AFDB3 /* ConstantsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032CA7C20131A52008AFDB3 /* ConstantsApi.swift */; };
 		5032CA7F20137F69008AFDB3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5032CA7E20137F68008AFDB3 /* README.md */; };
+		5032CA892013A293008AFDB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032CA852013A292008AFDB3 /* Constants.swift */; };
+		5032CA8A2013A293008AFDB3 /* ConstantsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032CA862013A292008AFDB3 /* ConstantsApi.swift */; };
+		5032CA8B2013A293008AFDB3 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032CA882013A292008AFDB3 /* UIViewController+extensions.swift */; };
 		506CAF932012880400B15500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506CAF922012880400B15500 /* AppDelegate.swift */; };
 		506CAF982012880400B15500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506CAF962012880400B15500 /* Main.storyboard */; };
 		506CAF9A2012880400B15500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506CAF992012880400B15500 /* Assets.xcassets */; };
@@ -25,9 +27,7 @@
 		516C99A2D87065539D872B55 /* Pods_dog_apiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3352E3F5137B32D293C2C00 /* Pods_dog_apiTests.framework */; };
 		7EDA1E2D2012980A008E8A56 /* DogsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA1E2C2012980A008E8A56 /* DogsListViewController.swift */; };
 		7EDA1E3020129BA3008E8A56 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA1E2F20129BA3008E8A56 /* DogViewController.swift */; };
-		7EDA1E3320129C9D008E8A56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA1E3220129C9D008E8A56 /* Constants.swift */; };
 		7EDA1E3520129DCA008E8A56 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA1E3420129DCA008E8A56 /* ImageCollectionViewCell.swift */; };
-		7EDA1E3A2012A55F008E8A56 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA1E392012A55F008E8A56 /* UIViewController+extensions.swift */; };
 		7EDA1E3D2012A9D0008E8A56 /* ClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA1E3C2012A9D0008E8A56 /* ClientManager.swift */; };
 		E02C5BE04673E2F6797C6599 /* Pods_dog_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4067CCCD1B361615D2DD44B7 /* Pods_dog_api.framework */; };
 /* End PBXBuildFile section */
@@ -56,8 +56,10 @@
 		5032CA732012EFBC008AFDB3 /* BreedsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsResponse.swift; sourceTree = "<group>"; };
 		5032CA752012F010008AFDB3 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		5032CA782012FCFB008AFDB3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		5032CA7C20131A52008AFDB3 /* ConstantsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApi.swift; sourceTree = "<group>"; };
 		5032CA7E20137F68008AFDB3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		5032CA852013A292008AFDB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5032CA862013A292008AFDB3 /* ConstantsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsApi.swift; sourceTree = "<group>"; };
+		5032CA882013A292008AFDB3 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		506CAF8F2012880400B15500 /* dog-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dog-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506CAF922012880400B15500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		506CAF972012880400B15500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,9 +79,7 @@
 		6968610BF1D7A447A24EDD32 /* Pods-dog-api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dog-api.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dog-api/Pods-dog-api.debug.xcconfig"; sourceTree = "<group>"; };
 		7EDA1E2C2012980A008E8A56 /* DogsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DogsListViewController.swift; path = "dog-api/App/DogsList/DogsListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		7EDA1E2F20129BA3008E8A56 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
-		7EDA1E3220129C9D008E8A56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EDA1E3420129DCA008E8A56 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		7EDA1E392012A55F008E8A56 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		7EDA1E3C2012A9D0008E8A56 /* ClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientManager.swift; path = Networking/ClientManager.swift; sourceTree = "<group>"; };
 		9E9653D498D5117314F09766 /* Pods-dog-apiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dog-apiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dog-apiTests/Pods-dog-apiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3352E3F5137B32D293C2C00 /* Pods_dog_apiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dog_apiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,13 +125,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5032CA7B20131A19008AFDB3 /* Constants */ = {
+		5032CA832013A292008AFDB3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7EDA1E3220129C9D008E8A56 /* Constants.swift */,
-				5032CA7C20131A52008AFDB3 /* ConstantsApi.swift */,
+				5032CA842013A292008AFDB3 /* Constants */,
+				5032CA872013A292008AFDB3 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5032CA842013A292008AFDB3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5032CA852013A292008AFDB3 /* Constants.swift */,
+				5032CA862013A292008AFDB3 /* ConstantsApi.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5032CA872013A292008AFDB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5032CA882013A292008AFDB3 /* UIViewController+extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		506CAF862012880400B15500 = {
@@ -165,8 +182,8 @@
 				7EDA1E29201296FB008E8A56 /* App */,
 				506CAFC02012E7C200B15500 /* Models */,
 				7EDA1E3B2012A996008E8A56 /* Networking */,
+				5032CA832013A292008AFDB3 /* Common */,
 				506CAFC12012E7D300B15500 /* Resources */,
-				7EDA1E3120129C80008E8A56 /* Common */,
 			);
 			path = "dog-api";
 			sourceTree = "<group>";
@@ -270,23 +287,6 @@
 			);
 			name = Dog;
 			path = App/Dog;
-			sourceTree = "<group>";
-		};
-		7EDA1E3120129C80008E8A56 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				5032CA7B20131A19008AFDB3 /* Constants */,
-				7EDA1E382012A541008E8A56 /* Extensions */,
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
-		7EDA1E382012A541008E8A56 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7EDA1E392012A55F008E8A56 /* UIViewController+extensions.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		7EDA1E3B2012A996008E8A56 /* Networking */ = {
@@ -636,18 +636,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5032CA762012F010008AFDB3 /* Breed.swift in Sources */,
+				5032CA892013A293008AFDB3 /* Constants.swift in Sources */,
 				7EDA1E3D2012A9D0008E8A56 /* ClientManager.swift in Sources */,
 				506CAFCC2012EC9800B15500 /* DogsWorker.swift in Sources */,
 				506CAF932012880400B15500 /* AppDelegate.swift in Sources */,
-				7EDA1E3A2012A55F008E8A56 /* UIViewController+extensions.swift in Sources */,
 				7EDA1E3520129DCA008E8A56 /* ImageCollectionViewCell.swift in Sources */,
+				5032CA8B2013A293008AFDB3 /* UIViewController+extensions.swift in Sources */,
 				7EDA1E2D2012980A008E8A56 /* DogsListViewController.swift in Sources */,
 				7EDA1E3020129BA3008E8A56 /* DogViewController.swift in Sources */,
-				5032CA7D20131A52008AFDB3 /* ConstantsApi.swift in Sources */,
+				5032CA8A2013A293008AFDB3 /* ConstantsApi.swift in Sources */,
 				506CAFCF2012EE2800B15500 /* DogsResponse.swift in Sources */,
 				506CAFC92012E8DF00B15500 /* Dog.swift in Sources */,
 				5032CA742012EFBC008AFDB3 /* BreedsResponse.swift in Sources */,
-				7EDA1E3320129C9D008E8A56 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

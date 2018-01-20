@@ -16,7 +16,7 @@ import AlamofireObjectMapper
 class ClientManager {
 
     //Alamofire settings goes here
-    fileprivate let sessionManager: SessionManager = {
+    private let sessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForResource = TimeInterval(90)
 
@@ -24,13 +24,13 @@ class ClientManager {
     }()
 
     //Awsome Alamofire with ObjectMapper, with generics Return
-    fileprivate func request<T: Mappable>(_ type: T.Type, url: URLConvertible,
-                                          method: HTTPMethod,
-                                          parameters: Parameters? = nil,
-                                          encoding: ParameterEncoding = URLEncoding.default,
-                                          headers: HTTPHeaders? = nil,
-                                          validStatusCodes: [Int],
-                                          onSuccess: @escaping ((Result<T>) -> Void)) {
+    private func request<T: Mappable>(_ type: T.Type, url: URLConvertible,
+                                      method: HTTPMethod,
+                                      parameters: Parameters? = nil,
+                                      encoding: ParameterEncoding = URLEncoding.default,
+                                      headers: HTTPHeaders? = nil,
+                                      validStatusCodes: [Int],
+                                      onSuccess: @escaping ((Result<T>) -> Void)) {
         sessionManager
             .request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
             .validate(statusCode: validStatusCodes)
